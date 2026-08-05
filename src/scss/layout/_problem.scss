@@ -1,0 +1,212 @@
+@use "../abstracts/variables" as *;
+
+.problem {
+    padding: 0 20px;
+}
+
+.problem-container {
+    max-width: 1688px;
+    margin-inline: auto;
+    padding: 80px 0;
+    background: $white;
+    border-radius: 20px;
+    overflow: hidden;
+    container-type: inline-size;
+}
+
+.problem-inner {
+    --rail: min(100cqw - 8px, 1320px);
+    --visible: calc((100cqw + var(--rail)) / 2);
+
+    width: var(--rail);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.problem-top {
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.problem-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.problem-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.problem-kicker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 6px 16px;
+    background: rgba(255, 255, 255, .1);
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #4a5565;
+}
+
+.problem-kicker-dot {
+    width: 8px;
+    height: 8px;
+    background: #6d5df6;
+    flex-shrink: 0;
+}
+
+.problem-title {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -.04em;
+    color: #1e2939;
+}
+
+.problem-desc {
+    max-width: 680px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -.025em;
+    color: #6a7282;
+}
+
+.problem-desc strong {
+    font-weight: 600;
+    color: #1e2939;
+}
+
+.problem-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.problem-punchline {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -.04em;
+    text-align: center;
+    color: #1e2939;
+}
+
+@media (max-width: 1024px) {
+
+    .problem {
+        padding: 64px 32px;
+        background: $white;
+        border-top: 1px solid #e5e7eb;
+        overflow: hidden;
+    }
+
+    .problem-container {
+        max-width: none;
+        padding: 0;
+        background: none;
+        border-radius: 0;
+        overflow: visible;
+    }
+
+    .problem-inner {
+        width: 100%;
+        gap: 24px;
+    }
+
+    .problem-top {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 24px;
+    }
+
+    .problem-content {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .problem-heading {
+        width: 100%;
+        gap: 16px;
+    }
+
+    .problem-kicker {
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    .problem-kicker-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .problem-title {
+        font-size: 48px;
+    }
+
+    .problem-desc {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    .problem-bottom {
+        gap: 24px;
+    }
+
+    .problem-punchline {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .problem {
+        padding: 60px 20px;
+        border-top: none;
+    }
+
+    .problem-inner {
+        gap: 20px;
+    }
+
+    .problem-top {
+        gap: 20px;
+    }
+
+    .problem-content {
+        gap: 16px;
+    }
+
+    .problem-heading {
+        gap: 14px;
+    }
+
+    .problem-title {
+        font-size: 36px;
+    }
+
+    .problem-bottom {
+        gap: 20px;
+    }
+
+    .problem-punchline {
+        font-size: 20px;
+    }
+
+}

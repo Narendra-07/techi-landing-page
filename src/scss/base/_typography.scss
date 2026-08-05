@@ -1,0 +1,46 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+h1 {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+@include laptop {
+
+    h1 {
+        font-size: 58px;
+    }
+
+}
+
+@include tablet {
+
+    h1 {
+        font-size: 46px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+}
+
+@include mobile {
+
+    h1 {
+        font-size: 38px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+}

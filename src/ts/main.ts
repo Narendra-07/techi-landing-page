@@ -1,5 +1,3 @@
-import '../scss/main.scss';
-
-document.querySelector('#app')!.innerHTML = `
-  <h1>Techi Landing Page</h1>
-`;
+import "../scss/main.scss";
+import "./components/mobileMenu";
+import "./components/carousel";

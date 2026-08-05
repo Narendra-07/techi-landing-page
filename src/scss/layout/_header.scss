@@ -1,0 +1,132 @@
+@use "../abstracts/variables" as *;
+
+.header {
+    position: absolute;
+    inset: 0 0 auto;
+    width: 100%;
+    z-index: 100;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 165px;
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 0 0 0 72px;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu li {
+    white-space: nowrap;
+}
+
+.nav-menu a {
+    color: $white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: .95;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-left: auto;
+}
+
+.login-link {
+    color: $white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    padding-right: 22px;
+    border-right: 1px solid rgba(255, 255, 255, .18);
+}
+
+.book-link {
+    color: $white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.header-actions .btn {
+    padding: 16px 34px;
+    white-space: nowrap;
+}
+
+.hamburger {
+    display: none;
+    width: 48px;
+    height: 48px;
+    margin-left: 18px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .15);
+    color: $white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+
+    .nav-menu {
+        display: none;
+    }
+
+    .header-actions {
+        display: flex;
+        margin-left: auto;
+        gap: 20px;
+    }
+
+    .header-actions .btn {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .nav-menu {
+        display: none !important;
+    }
+
+    .header-actions {
+        display: none !important;
+    }
+
+    .hamburger {
+        display: flex !important;
+        margin-left: auto;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+}
