@@ -1,0 +1,258 @@
+@use "../abstracts/variables" as *;
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(rgba(90, 120, 205, .18), rgba(150, 170, 255, .12)), url("../../assets/images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $white;
+    overflow: hidden;
+}
+
+.hero {
+    padding-top: 110px;
+    padding-bottom: 0;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    width: 950px;
+    max-width: 100%;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 6px 16px;
+    height: 32px;
+    margin-bottom: 24px;
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 50px;
+    backdrop-filter: blur(8px);
+}
+
+.hero-badge span:last-child {
+    color: $white;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.hero-badge-icon {
+    width: 8px;
+    height: 8px;
+    background: $white;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.hero h1 {
+    margin: 0 auto 24px;
+    max-width: 950px;
+    font-size: 72px;
+    line-height: 1.1;
+}
+
+.hero p {
+    max-width: 810px;
+    margin: 0 auto 36px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 90px;
+}
+
+.hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.hero-image picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero-image img {
+    display: block;
+    width: 1460px;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+
+    .header {
+        padding: 16px 0;
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .logo img {
+        width: 96px;
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-left: auto;
+    }
+
+    .header-actions .btn {
+        display: none;
+    }
+
+    .login-link {
+        display: block;
+        padding-right: 20px;
+        border-right: 1px solid rgba(255, 255, 255, .18);
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .book-link {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        white-space: nowrap;
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        margin-left: 20px;
+        border-radius: 50%;
+        background: rgba(108, 84, 255, .9);
+        color: $white;
+        font-size: 22px;
+        flex-shrink: 0;
+    }
+
+    .hero {
+        padding-top: 90px;
+        padding-bottom: 0;
+    }
+
+    .hero-content {
+        width: 700px;
+        max-width: 100%;
+    }
+
+    .hero-badge {
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 56px;
+        line-height: 1.1;
+        max-width: 700px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        max-width: 640px;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 56px;
+    }
+
+    .hero-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: -16px;
+    }
+
+    .hero-image picture {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 704px;
+        max-width: 704px;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .hero-section {
+        background-size: 100% 100%, auto max(1300px, 100%);
+        background-position: center top;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 16px;
+    }
+
+}

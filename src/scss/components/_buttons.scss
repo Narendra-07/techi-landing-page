@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    border-radius: $radius-pill;
+    font-family: $font-primary;
+    font-size: 16px;
+    font-weight: 500;
+    transition: $transition;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: $primary;
+    color: $white;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, .2);
+    border: 1px solid rgba(255, 255, 255, .25);
+    color: #1f2937;
+}
